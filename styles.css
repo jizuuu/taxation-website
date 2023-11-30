@@ -1,0 +1,360 @@
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  overflow-x: hidden;
+  color: #333;
+  font-family: 'Georgia', serif;
+}
+
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.image-container {
+  position: relative;
+  padding: 0;
+  max-width: 100%;
+  width: 100%;
+  max-height: 300px;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: opacity 0.5s;
+}
+
+@media (max-width: 768px) {
+  .navbar .menu {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .navbar .menu li {
+    margin: 10px 0;
+  }
+
+  section {
+    padding: 30px;
+  }
+
+  .image-container {
+    max-height: 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    height: auto;
+  }
+
+  .navbar .menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar .menu li {
+    margin: 10px 0;
+  }
+
+  .image-container {
+    max-height: 150px;
+  }
+
+  section {
+    padding: 20px;
+    font-size: 18px;
+  }
+
+  .navbar .menu li a {
+    font-size: 14px;
+  }
+}
+
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 75px;
+  background: #2c2c2c;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  max-width: 100%;
+  margin: auto;
+  padding-right: 20px;
+  z-index: 3;
+}
+
+.navbar .menu {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .menu li {
+  list-style: none;
+  margin: 0 35px;
+}
+
+.navbar .menu li a {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+  color: #ffe44d;
+  text-decoration: none;
+}
+
+.navbar .menu li a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #ffcc00;
+  transform: scaleX(0);
+  transform-origin: 100% 50%;
+  transition: transform 0.3s ease;
+}
+
+.navbar .menu li a:hover::after {
+  transform: scaleX(1);
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  background: #2c2c2c;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+#about:hover .submenu {
+  display: flex;
+  flex-direction: column;
+}
+
+.submenu li {
+  padding: 10px;
+}
+
+.submenu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.submenu a:hover {
+  color: #e44d26;
+}
+
+section {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  padding: 50px;
+  text-align: center;
+  flex-direction: column;
+}
+
+.custom-section {
+  margin-top: 50px;
+}
+
+#home,
+#about,
+#references {
+  background: #f6f3f3;
+}
+
+.clip-background {
+  background-clip: padding-box;
+}
+
+#taxation,
+#references {
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  margin-top: -60px;
+}
+
+#spanishEra,
+#preColonial,
+#americanEra,
+#postWarCurrentEra {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#americanEra {
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+#americanEra h2 {
+  text-align: center;
+}
+
+#spanishEra h2 {
+  text-align: center;
+}
+
+.section-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.left-align-text {
+  text-align: left;
+  margin-left: 20px;
+}
+
+#taxation .section-content,
+#americanEra .section-content,
+#spanishEra .section-content {
+  border: none;
+}
+
+.centered-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.two-column-layout {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-column,
+.right-column {
+  width: 48%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.bordered-section {
+  border: 2px solid #ddd;
+}
+
+#taxation {
+  background-image: url('historybg.jpg');
+  background-size: cover;
+}
+
+#preColonial {
+  background-image: url('historybg.jpg');
+  background-size: cover;
+}
+
+#spanishEra {
+  background-image: url('historybg.jpg');
+  background-size: cover;
+}
+
+#americanEra {
+  background-image: url('historybg.jpg');
+  background-size: cover;
+}
+
+#postWarCurrentEra {
+  background-image: url('historybg.jpg');
+  background-size: cover;
+}
+
+.image-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 1;
+  padding: 20px;
+  white-space: nowrap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+.image-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffcc00;
+  font-family: 'Baloo Tamma 2', cursive;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 1;
+  padding: 20px;
+  white-space: nowrap;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.image-container {
+  position: relative;
+  padding: 0;
+  max-width: 100%;
+  width: 100%;
+  max-height: 300px;
+  box-sizing: border-box;
+  border: 2px solid #2c2c2c;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: opacity 0.5s;
+}
+
+#references {
+  background-color: rgba(128, 128, 128, 0.5);
+  position: relative;
+  z-index: 2;
+}
+
+#references h2 {
+  color: #ffcc00;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('histor.jpg') center center/cover no-repeat;
+  z-index: -1;
+}
